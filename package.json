@@ -1,0 +1,22 @@
+{
+  "name": "dremio-node-api",
+  "version": "1.0.0",
+  "description": "Dremio API for Node JS.",
+  "author": {
+    "name": "Christy Haragan",
+    "email": "christy.haragan.github@gmail.com",
+    "url": "https://github.com/christyharagan"
+  },
+  "license": "MIT",
+  "main": "out/index.js",
+  "types": "out/index.d.ts",
+  "dependencies": {
+    "request": "^2.87.0",
+    "request-promise-native": "^1.0.5"
+  },
+  "devDependencies": {
+    "@types/request-promise-native": "^1.0.15",
+    "@types/node": "^9.4.7",
+    "jison": "^0.4.18"
+  }
+}
