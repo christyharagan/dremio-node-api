@@ -207,7 +207,9 @@ export async function createAPI(config: ClusterConfiguration, login: schema.Logi
             if (status.jobState === 'COMPLETED') {
               return await api.job.getResults(jobId, offset, limit)
             } else {
-              throw status.errorMessage
+              if (status.errorMessage && status.errorMessage !== '') {
+                throw status.errorMessage
+              }
             }
           } else if (timeout !== undefined) {
             if (new Date().getTime() > (start + timeout)) {
